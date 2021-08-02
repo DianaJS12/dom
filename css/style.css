@@ -1,0 +1,54 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.background{
+    background: rgba(0,0,0,0.9);
+    height: 70px;
+    transition: 0.5s;
+}
+.navcenter{
+    width: 90%;
+    margin: auto;
+    padding-top: 10px;
+}
+.navinline{
+    display: flex;
+    justify-content: space-between;
+}
+.navinline ul{
+    padding-left: 0;
+    list-style: none;
+    color: white;
+}
+.list{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+}
+.toggle{
+    display: none;
+}
+
+@media(max-width:768px){
+    .toggle{
+        display: block;
+    }
+    .background.activeBack{
+        height: 280px;
+    }
+    .background.activeBack .list{
+        display: flex;
+    }
+    .list{
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        width: 90%;
+        display: none;
+    }
+    .list li{
+        margin: 18px;
+        border-bottom: 1px solid white;
+    }
+}
